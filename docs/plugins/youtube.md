@@ -26,7 +26,7 @@ This version requires you rebuild your YAGPDB image but doesn't use bind mounts.
 ```cp filepath/to/credentials.json yagpdb/yagpdb_docker/credentials.json```
 
 :::note
-You can put it pretty much wherever you want, but if you put it outside the repo you'll need to add another line into your Dockerfile to include said path to your build workdir - not part of this guide.
+The file needs to be in the docker build context, thus we put it directly into the YAGPDB repo.
 :::
 
 2.2 - Edit your Dockerfile:
@@ -36,12 +36,8 @@ You can put it pretty much wherever you want, but if you put it outside the repo
 Instead of nano you can use whatever editor of your choice.
 :::
 
-2.3 - Add the following line to the Dockerfile above extra_flags :
+2.3 - Add the following line to the Dockerfile above ENTRYPOINT :
 ```COPY --from=builder /appbuild/yagpdb/yagpdb_docker/credentials.json credentials/credentials.json```
-
-:::note
-Change the credentials.json filename if you didn't rename it in 2.1 and/or change the file-path accordingly
-:::
 
 2.4 - Build your docker image:
 ```docker-compose -f yagpdb/yagpdb_docker/docker-compose.dev.yml build --force-rm --no-cache --pull```
@@ -52,11 +48,8 @@ Change the credentials.json filename if you didn't rename it in 2.1 and/or chang
 2.6 - Add the credentials.json file-path to the app.env file:
 ```GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/credentials.json```
 
-2.7 - Run your bot with docker-compose.yml or docker-compose.proxy.yml
-```
-docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d
-docker-compose -f yagpdb/yagpdb_docker/docker-compose.proxied.yml up -d
-```
+2.7 - Run your bot with docker-compose.yml
+```docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d```
 
 ## Part 2b - Your bot setup with bind mounts
 
@@ -71,21 +64,15 @@ This Version bind mounts the credentials.json file on the host machine to the YA
 2.2 - Edit your docker-compose file:
 ```nano yagpdb/yagpdb_docker/docker-compose.yml```
 
-```nano yagpdb/yagpdb_docker/docker-compose.proxied.yml```
-
-:::note
-Choose the right file depending on if you use a reverse proxy.  
-:::
-
-2.3 - Add the bind mount to the docker-compose file
+2.3 - Add the bind mount of the credentials folder to the docker-compose file
 ```    
 volumes:
       - cert_cache:/app/cert
       - soundboard:/app/soundboard
-      - ~/credentials:/app/credentials:ro
+      - filepath/credentials:/app/credentials:ro
 ```
 
-The -```~/credentials:/app/credentials:ro``` line is the one you need to add. 
+The -```filepath/credentials:/app/credentials:ro``` line is the one you need to add. 
 You can change the file-path accordingly to you needs. You should use the following format
  
 ```local-source-file-path:container-destination-file-path:ro```
@@ -95,19 +82,11 @@ It's very important that you use absolute file-paths for the container side and 
 2.4 - Edit your app.env file:
 ```nano yagpdb/yagpdb_docker/app.env```
 
-
 2.5 - Add the credentials.json file-path to the app.env file:
 ```GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/credentials.json```
 
-:::caution
-Change the file-path accordingly if you mapped it differently in 2.3
-:::
-
-2.6 - - Run your bot with docker-compose.yml or docker-compose.proxy.yml  
-```
-docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d
-docker-compose -f yagpdb/yagpdb_docker/docker-compose.proxied.yml up -d
-```
+2.6 - Run your bot with docker-compose.yml
+```docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d```
 
 
 Guide was written by fluffyfirefly#8032. Content was copied with permission.
