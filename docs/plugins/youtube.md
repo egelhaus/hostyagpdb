@@ -6,6 +6,10 @@ sidebar_position: 2
 
 In order for you to enable YouTube feeds you'll need to get the YouTube API credentials and then add them to your bot setup. There are two versions to add the credential files to your container.
 
+:::caution
+Change the file-paths accordingly.
+:::
+
 ## Part 1 - Youtube Dashbord  
 1.1 - Go to https://console.cloud.google.com/apis/ and create a new project.  
 1.2 - Go to https://console.cloud.google.com/apis/library and enable the "YouTube Data API v3" API  
@@ -28,8 +32,7 @@ You can put it pretty much wherever you want, but if you put it outside the repo
 2.2 - Edit your Dockerfile:
 ```nano yagpdb/yagpdb_docker/Dockerfile```
 
-:::note
-Change the file-path accordingly.  
+:::info
 Instead of nano you can use whatever editor of your choice.
 :::
 
@@ -43,32 +46,17 @@ Change the credentials.json filename if you didn't rename it in 2.1 and/or chang
 2.4 - Build your docker image:
 ```docker-compose -f yagpdb/yagpdb_docker/docker-compose.dev.yml build --force-rm --no-cache --pull```
 
-:::note
-Change the file-path accordingly.
-:::
-
 2.5 - Edit your app.env file:
 ```nano yagpdb/yagpdb_docker/app.env```
 
-:::note
-Change the file-path accordingly.
-:::
-
 2.6 - Add the credentials.json file-path to the app.env file:
 ```GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/credentials.json```
-
-:::note
-Change the file-path accordingly if you changed it in 2.3.
-:::
 
 2.7 - Run your bot with docker-compose.yml or docker-compose.proxy.yml
 ```
 docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d
 docker-compose -f yagpdb/yagpdb_docker/docker-compose.proxied.yml up -d
 ```
-:::note
-Change the file-path accordingly.
-:::
 
 ## Part 2b - Your bot setup with bind mounts
 
@@ -79,10 +67,6 @@ This Version bind mounts the credentials.json file on the host machine to the YA
 
 ```cp filepath/download/credentials.json filepath/credentials/credentials.json```
 
-:::note
-Change the file-path accordingly.
-:::
-
 
 2.2 - Edit your docker-compose file:
 ```nano yagpdb/yagpdb_docker/docker-compose.yml```
@@ -91,7 +75,6 @@ Change the file-path accordingly.
 
 :::note
 Choose the right file depending on if you use a reverse proxy.  
-Change the file-path accordingly.
 :::
 
 2.3 - Add the bind mount to the docker-compose file
@@ -112,16 +95,12 @@ It's very important that you use absolute file-paths for the container side and 
 2.4 - Edit your app.env file:
 ```nano yagpdb/yagpdb_docker/app.env```
 
-:::note
-Change the file-path accordingly.
-:::
-
 
 2.5 - Add the credentials.json file-path to the app.env file:
 ```GOOGLE_APPLICATION_CREDENTIALS=/app/credentials/credentials.json```
 
-:::note
-Change the file-path accordingly if you mapped it differently in 2..
+:::caution
+Change the file-path accordingly if you mapped it differently in 2.3
 :::
 
 2.6 - - Run your bot with docker-compose.yml or docker-compose.proxy.yml  
@@ -129,10 +108,6 @@ Change the file-path accordingly if you mapped it differently in 2..
 docker-compose -f yagpdb/yagpdb_docker/docker-compose.yml up -d
 docker-compose -f yagpdb/yagpdb_docker/docker-compose.proxied.yml up -d
 ```
-
-:::note
-Change the file-path accordingly.
-:::
 
 
 Guide was written by fluffyfirefly#8032. Content was copied with permission.
