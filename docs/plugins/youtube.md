@@ -70,6 +70,7 @@ docker-compose -f yagpdb/yagpdb_docker/docker-compose.proxied.yml up -d
 Change the file-path accordingly.
 :::
 
+## Part 2b - Your bot setup with bind mounts
 
 This Version bind mounts the credentials.json file on the host machine to the YAGPDB docker container in read only mode and thus allows you to run the YouTube feeds without building your own image. However keep in consideration that this means the container has limited access to your local file system.
 
