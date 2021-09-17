@@ -73,7 +73,7 @@ volumes:
       - filepath/credentials:/app/credentials:ro
 ```
 
-The ```-filepath/credentials:/app/credentials:ro``` line is the one you need to add. 
+The ```- filepath/credentials:/app/credentials:ro``` line is the one you need to add. 
 You can change the file-path accordingly to you needs. You should use the following format
  
 ```local-source-file-path:container-destination-file-path:ro```
