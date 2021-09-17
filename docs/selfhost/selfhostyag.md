@@ -20,7 +20,7 @@ If you have somehow found this website, and you're unsure what Yet Another Gener
 
 Before we begin to install Yet Another General Discord Bot, or YAGPDB for short, you will need the following prerequisites:
 
-- Server with Root and/or sudo access. Need one? See [here](resources/hostingproviders)
+- Server with Root and/or sudo access. Need one? See [here](/resources/hostingproviders)
 - Debian 10 or Ubuntu 20.04 (or newer if available)
 - Seperate user for the bot
 - Git
