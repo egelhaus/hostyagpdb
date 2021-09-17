@@ -188,7 +188,7 @@ Finally, To run YAGPDB all you have to do is run:
 This will run everything that YAGPDB has to offer.  
 If you don't have any plugins setup, they will spit out errors.  
 Also, this will run bot in ports 5000 and 5001.  
-If you want to run it on ports 80 and 443, andd flag -pa
+If you want to run it on ports 80 and 443, add flag -pa
 :::
 
 This will run YAGPDB as long as your terminal session remains open. If You'd like to keep YAGPDB and close your session, I recommend using nohup. You can learn how to use nohup [here](https://hexadix.com/use-nohup-execute-commands-background-keep-running-exit-shell-promt/)
