@@ -2,12 +2,13 @@
 sidebar_position: 2
 ---
 
-# How to setup YouTube Plugin for selfhosting
+# How to setup YouTube Plugin for selfhosting [Docker]
 
 In order for you to enable YouTube feeds you'll need to get the YouTube API credentials and then add them to your bot setup. There are two versions to add the credential files to your container.
 
 :::caution
-Change the file-paths accordingly.
+Change the file-paths accordingly.  
+This guide is for Docker hosters. If you use non-Docker version, follow this guide (COMING SOON)
 :::
 
 ## Part 1 - Youtube Dashbord  
