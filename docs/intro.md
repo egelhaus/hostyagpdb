@@ -9,7 +9,7 @@ slug: /
 This site is WIP and should not be considered as final product
 :::
 
-Welcome to install YAGPDB. A website based on helping users with little knowledge of Linux, go, and other skills and software to install their own instance of Yet Another General Purpose Discord Bot. Originally created by Test Dummy#8204. Taken over and improved by JantsoP#0001
+Welcome to install YAGPDB. A website based on helping users with little knowledge of Linux, go, and other skills and software to install their own instance of Yet Another General Purpose Discord Bot. Originally created by `Test Dummy#8204`. Taken over and improved by `JantsoP#0001`
 
 ---
 ## Guides
