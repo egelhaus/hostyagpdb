@@ -13,10 +13,10 @@ If you get this error:
 ```error="Did not set required config option: \"yagpdb.clientid\" (YAGPDB_CLIENTID as env var)"```
 
 **Using ```/etc/environment```:**  
-If you have put your [env variables](https://raw.githubusercontent.com/jonas747/yagpdb/master/cmd/yagpdb/sampleenvfile) inside of ```/etc/environment```, simply log out of your shell and log back in. Then try to start YAGPDB as you would normally. However, we reccommend that you move your env variables to ```~/.profile```. Learn how to do so [here](/selfhost/selfhostyag).
+If you have put your [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile) inside of ```/etc/environment```, simply log out of your shell and log back in. Then try to start YAGPDB as you would normally. However, we reccommend that you move your env variables to ```~/.profile```. Learn how to do so [here](/selfhost/selfhostyag).
 
 **Using ```~/.profile:```**  
-If you are storing your [env variables](https://raw.githubusercontent.com/jonas747/yagpdb/master/cmd/yagpdb/sampleenvfile) inside of ```~/.profile```, ensure that you're starting YAGPDB with the same user. Example if you start yag with sudo - you must store your env variables as the root user. As a work around you can use the following command:  
+If you are storing your [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile) inside of ```~/.profile```, ensure that you're starting YAGPDB with the same user. Example if you start yag with sudo - you must store your env variables as the root user. As a work around you can use the following command:  
 ```sudo -E ./yagpdb -all```
 
 ---
@@ -42,7 +42,7 @@ Reverse proxying sounds super complicated, right? Simply put, yes it is. But, th
 :::caution
 This guide has been designed with the idea that you know basic terminal commands, and have Ubuntu 18.04 or above installed.
 
-In this guide we will refrence your YAGPDB_HOST Variable. Please replace this with the value you set within your [env variables](https://raw.githubusercontent.com/jonas747/yagpdb/master/cmd/yagpdb/sampleenvfile).
+In this guide we will refrence your YAGPDB_HOST Variable. Please replace this with the value you set within your [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile).
 :::
 
 First of all, we need to install nginx: 

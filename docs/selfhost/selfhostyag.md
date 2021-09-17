@@ -138,7 +138,7 @@ Before downloading Yet Another General Purpose Discord Bot, we need to first con
 nano ~/.profile
 ```
 
-Then, copy the [env variables](https://raw.githubusercontent.com/jonas747/yagpdb/master/cmd/yagpdb/sampleenvfile) and paste them in.
+Then, copy the [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile) and paste them in.
 :::note
 You do not have to set each variable. For basic functionality all you need to edit is:
 
@@ -171,15 +171,11 @@ After installing all of the prerequisites, it's time to download and install Yet
 
 To download YAGPDB, run the following commands:
 ```
-git clone -b yagpdb https://github.com/jonas747/discordgo $GOPATH/src/github.com/jonas747/discordgo
-git clone -b dgofork https://github.com/jonas747/dutil $GOPATH/src/github.com/jonas747/dutil
-git clone -b dgofork https://github.com/jonas747/dshardmanager $GOPATH/src/github.com/jonas747/dshardmanager
-cd $GOPATH/src/github.com/jonas747/
-git clone https://github.com/jonas747/yagpdb.git
-cd $GOPATH/src/github.com/jonas747/yagpdb/cmd/yagpdb
-sh ./build.sh
+git clone https://github.com/botlabs-gg/yagpdb
+cd yagpdb/cmd/yagpdb
+sh build.sh
 ```
-This process may take a while, so go grab a cup of tea. Or why not support [Jonas747](https://docs.yagpdb.xyz/donating) for developing such an awesome robot? 🤖
+This process may take a while, so go grab a cup of tea.
 
 ## Running YAGPDB
 
@@ -187,6 +183,13 @@ Finally, To run YAGPDB all you have to do is run:
 ```
 ./yagpdb -all
 ```
+
+:::note
+This will run everything that YAGPDB has to offer.  
+If you don't have any plugins setup, they will spit out errors.  
+Also, this will run bot in ports 5000 and 5001.  
+If you want to run it on ports 80 and 443, andd flag -pa
+:::
 
 This will run YAGPDB as long as your terminal session remains open. If You'd like to keep YAGPDB and close your session, I recommend using nohup. You can learn how to use nohup [here](https://hexadix.com/use-nohup-execute-commands-background-keep-running-exit-shell-promt/)
 
