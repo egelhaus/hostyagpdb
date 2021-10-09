@@ -21,7 +21,7 @@ If you are storing your [env variables](https://raw.githubusercontent.com/botlab
 
 ---
 
-## YAGPDB Dashboard: ERR_SSL_PROTOCOL_ERROR
+## YAGPDB Control Panel: ERR_SSL_PROTOCOL_ERROR
 
 When you try to access your dashboard using the variable you set [here](/selfhost/selfhostyag), you may get the following error:
 ![](/img/sslerror.png)
@@ -42,7 +42,7 @@ Reverse proxying sounds super complicated, right? Simply put, yes it is. But, th
 :::caution
 This guide has been designed with the idea that you know basic terminal commands, and have Ubuntu 18.04 or above installed.
 
-In this guide we will refrence your YAGPDB_HOST Variable. Please replace this with the value you set within your [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile).
+In this guide we will reference your YAGPDB_HOST Variable. Please replace this with the value you set within your [env variables](https://raw.githubusercontent.com/botlabs-gg/yagpdb/master/cmd/yagpdb/sampleenvfile).
 :::
 
 First of all, we need to install nginx: 
@@ -128,4 +128,4 @@ Voila! You should be able to access your dashboard securely using ```https://exa
 ## Know of any other common issues?
 
 Do you know any common issues that occur often or are enquired about all the time?  
-Send them my way via [GitHub Pull request](https://github.com/JantsoP/hostyagpdb/pulls)
+Send them my way via [GitHub Pull request](https://github.com/JantsoP/hostyagpdb/pulls).
