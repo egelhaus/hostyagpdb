@@ -36,7 +36,7 @@ If you're insane, you could just not use a https certificate. However, of course
 
 Your dashboard should now be accessible by using ```http://example.com```.
 
-**Use a reverse proxy.**  
+## Using NGINX reverse proxy (Non-Docker version)
 Reverse proxying sounds super complicated, right? Simply put, yes it is. But, thanks to JantsoP#0001, the hard work has been done for you.
 
 :::caution
