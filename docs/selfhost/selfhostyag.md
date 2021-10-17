@@ -38,7 +38,7 @@ sudo apt install git
 How to Install Golang:
 ```
 wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.17.12linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz
 ```
 
 Please append the following line of code to the bottom of your ~/.profile like so:
