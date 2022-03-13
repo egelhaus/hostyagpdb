@@ -24,4 +24,4 @@ Install YAGPDB has several guides to help you install this brilliant robot.
 
 ## Resources
 
-You can check out the [Resources](resources/resources) page to see documentation, Custom Command Github repositories and much more.
+You can check out the [Resources](resources) page to see documentation, Custom Command Github repositories and much more.
