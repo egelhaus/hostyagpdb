@@ -9,7 +9,7 @@ This document requires that you have intermediate knowledge of Linux operating s
 :::
 
 :::info
-If you want to use Docker instead, click [here](selfhost/docker).
+If you want to use Docker instead, click [here](../docker).
 :::
 
 Need help installing your very own instance of Yet Another General Purpose Discord Bot? Welcome to the Unofficial Guide on installing YAGPDB for self hosting.
