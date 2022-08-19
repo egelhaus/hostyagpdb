@@ -65,7 +65,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
             title: 'Community',
             items: [
               {
-                label: 'YAGPDDB GitHub',
+                label: 'YAGPDB GitHub',
                 href: 'https://github.com/botlabs-gg/yagpdb',
               },
               {
