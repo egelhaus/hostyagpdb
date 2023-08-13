@@ -24,7 +24,7 @@ Before we begin to install Yet Another General Discord Bot, or YAGPDB for short,
 - Debian 10 or Ubuntu 20.04 (or newer if available)
 - Seperate user for the bot
 - Git
-- Golang (1.17 or later.)
+- Golang (1.20 or later.)
 - PostgreSQL (9.6 or later.)
 - Redis (V3.x or later.)
 - Optional: FFmpeg (for soundboard)
@@ -37,8 +37,8 @@ sudo apt install git
 
 How to Install Golang:
 ```
-wget https://golang.org/dl/go1.17.2.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.17.2.linux-amd64.tar.gz
+wget https://go.dev/dl/go1.21.0.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.21.0.linux-amd64.tar.gz
 ```
 
 Please append the following line of code to the bottom of your ~/.profile like so:
