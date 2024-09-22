@@ -158,7 +158,7 @@ To get DOCKERHOST_IP, run
 ```shell
 ip addr
 ```
-in your Host, where you hosted YAGPDB.
+in your Host, where you hosted your YAGPDB Instance.
 Now click on Save.
 
 Visit YOURHOST.COM to see if it worked!
